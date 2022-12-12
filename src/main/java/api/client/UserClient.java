@@ -1,10 +1,12 @@
+package api.client;
+import api.client.Client;
+import api.model.Credentials;
+import api.model.User;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-
 import static io.restassured.RestAssured.given;
 
 public class UserClient extends Client {
-
     @Step("Создание нового пользователя")
     public ValidatableResponse createUser(User user) {
         return given()
@@ -55,5 +57,4 @@ public class UserClient extends Client {
                 .delete(USER_AUTH)
                 .then();
     }
-
 }

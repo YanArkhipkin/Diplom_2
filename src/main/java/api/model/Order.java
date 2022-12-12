@@ -1,3 +1,4 @@
+package api.model;
 import java.util.List;
 
 public class Order {
@@ -26,6 +27,4 @@ public class Order {
     public static Order getEmptyOrder() {
         return new Order(List.of());
     }
-
 }
-

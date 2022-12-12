@@ -1,9 +1,11 @@
+package api.client;
+import api.client.Client;
+import api.model.Order;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import static io.restassured.RestAssured.given;
 
 public class OrderClient extends Client {
-
     @Step("Создание заказа")
     public ValidatableResponse createOrder(Order order, String token) {
         return given()
@@ -43,5 +45,4 @@ public class OrderClient extends Client {
                 .get(ORDERS)
                 .then().log().all();
     }
-
 }

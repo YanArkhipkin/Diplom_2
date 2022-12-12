@@ -1,9 +1,11 @@
+import api.client.UserClient;
+import api.model.Credentials;
+import api.model.User;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class CreateUserTest {
@@ -32,7 +34,7 @@ public class CreateUserTest {
         userClient.createUser(user);
         ValidatableResponse responseCreate = userClient.createUser(user);
         responseCreate.assertThat().statusCode(403)
-                .and().body("message", equalTo("User already exists"));
+                .and().body("message", equalTo("api.model.User already exists"));
     }
 
     @Test

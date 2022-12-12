@@ -1,9 +1,12 @@
+import api.client.OrderClient;
+import api.client.UserClient;
+import api.model.Order;
+import api.model.User;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
 

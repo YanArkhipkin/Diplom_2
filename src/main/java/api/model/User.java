@@ -1,3 +1,4 @@
+package api.model;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class User {
@@ -59,8 +60,4 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
-
-
-
-
 }

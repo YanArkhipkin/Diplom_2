@@ -1,3 +1,5 @@
+package api.model;
+
 public class Credentials {
     String email;
     String password;
@@ -38,5 +40,4 @@ public class Credentials {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }
